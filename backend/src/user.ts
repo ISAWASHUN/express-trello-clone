@@ -8,16 +8,6 @@ const app = express();
 
 app.use(express.json());
 
-const port = 3000;
-
-app.get('/health_check', (req: Request, res: Response) => {
-  res.send('Hello, TypeScript with Express!');
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
-
 app.post("/register", async (req: Request, res: Response) => {
   const {name, email, password} = req.body;
 
